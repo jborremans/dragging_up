@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tool_name: MyString
+  tool_type: MyString
+  tool_price: 1
+  tool_condition: MyString
+  tool_description: MyText
+  tool_picture: MyString
+
+two:
+  tool_name: MyString
+  tool_type: MyString
+  tool_price: 1
+  tool_condition: MyString
+  tool_description: MyText
+  tool_picture: MyString

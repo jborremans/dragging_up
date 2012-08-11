@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120811182833) do
+ActiveRecord::Schema.define(:version => 20120811211714) do
+
+  create_table "tools", :force => true do |t|
+    t.string   "tool_name"
+    t.string   "tool_type"
+    t.integer  "tool_price"
+    t.string   "tool_condition"
+    t.text     "tool_description"
+    t.string   "tool_picture"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

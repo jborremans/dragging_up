@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tool name:</b>
+  <%= @tool.tool_name %>
+</p>
+
+<p>
+  <b>Tool type:</b>
+  <%= @tool.tool_type %>
+</p>
+
+<p>
+  <b>Tool price:</b>
+  <%= @tool.tool_price %>
+</p>
+
+<p>
+  <b>Tool condition:</b>
+  <%= @tool.tool_condition %>
+</p>
+
+<p>
+  <b>Tool description:</b>
+  <%= @tool.tool_description %>
+</p>
+
+<p>
+  <b>Tool picture:</b>
+  <%= @tool.tool_picture %>
+</p>
+
+
+<%= link_to 'Edit', edit_tool_path(@tool) %> |
+<%= link_to 'Back', tools_path %>
