@@ -3,6 +3,9 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    
+    @user = User.find_by_id(session["bozo"])
+    end
 
     respond_to do |format|
       format.html # index.html.erb
