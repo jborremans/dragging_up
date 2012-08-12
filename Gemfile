@@ -5,7 +5,15 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
+group :development do
+ gem 'sqlite3'
+ gem 'quiet_assets'
+end
+
+group :test do
+  gem 'sqlite3'
+end
 
 
 # Gems used only for assets and not required
@@ -36,6 +44,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use debugger
 # gem 'debugger'
+
 group :production do
   gem 'pg'
 end
