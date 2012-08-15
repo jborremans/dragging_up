@@ -1,5 +1,7 @@
 DraggingUp::Application.routes.draw do
   
+  resources :carts
+
   get "sessions/new", :as => :signin
   post "sessions/create"
   get "sessions/destroy", :as => :signout
