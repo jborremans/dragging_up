@@ -22,7 +22,7 @@
     <td>$<%= tool.tool_price %></td>
     <td><%= tool.tool_condition %></td>
     <td><%= tool.tool_description %></td>
-    <td><%= tool.tool_picture %></td>
+    <td>#<%= tool.tool_picture %></td>
     <td><%= link_to 'Show', tool %></td>
     <td><%= link_to 'Edit', edit_tool_path(tool) %></td>
     <td><%= link_to 'Destroy', tool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
