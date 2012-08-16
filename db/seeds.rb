@@ -1,7 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+if Rails.env.development?
+  Tool.destroy_all
+  
+  tool_names = ['hammer', 'saw', 'screw driver', 'nail gun', 'welder', 'soldering iron']
+  
+  50.times do |t|
+    t = Tool.new
+    t.tool_name = tool_names[rand(0..(tool_names.size - 1))]
+    t.tool_type = %w(power hand)[rand(0..1)]
+    t.tool_price = rand(50..500)
+    # t.string   "tool_condition"
+    # t.text     "tool_description"
+    # t.string   "tool_picture"
+    t.save
+  end
+end
