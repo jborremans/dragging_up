@@ -11,6 +11,7 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 
@@ -19,13 +20,14 @@
   <tr>
     <td><%= tool.tool_name %></td>
     <td><%= tool.tool_type %></td>
-    <td>$<%= tool.tool_price %></td>
+    <td><%= number_to_currency(tool.tool_price, :precision => 0) %></td>
     <td><%= tool.tool_condition %></td>
     <td><%= tool.tool_description %></td>
     <td>#<%= tool.tool_picture %></td>
-    <td><%= link_to 'Show', tool %></td>
-    <td><%= link_to 'Edit', edit_tool_path(tool) %></td>
-    <td><%= link_to 'Destroy', tool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Add to Cart', "#" %></td>
+    <td><%= link_to 'Show', tool_url(tool.id) %></td>
+    <td><%= link_to 'Edit', edit_tool_path(tool.id) %></td>
+    <td><%= link_to 'Destroy', tool_url(tool.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
