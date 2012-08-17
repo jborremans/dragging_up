@@ -1,4 +1,11 @@
 class SessionsController < ApplicationController
+
+
+  
+  def require_authorization
+    redirect_to root_url, notice: 'Nice try!' unless session[:user_id] == params[:id].to_i
+  end
+  
    def new
     end
 
@@ -8,17 +15,17 @@ class SessionsController < ApplicationController
       if user
         if user.authenticate(params[:password])
           session[:user_id] = user.id
-          redirect_to root_url, notice: "Welcome Back!"
+          redirect_to user_url(user), notice: "Welcome Back!"
         else
-          redirect_to root_url, notice: "Wrong password!"
+          redirect_to root_url, notice: "Wrong email or password!"
         end
       else
-        redirect_to root_url, notice: "Wrong email address!"
+        redirect_to root_url, notice: "Wrong email or password!"
       end
     end
 
     def destroy
       session[:user_id] = nil
-      redirect_to root_url
+      redirect_to root_url, notice: "You are now signed out."
     end
   end

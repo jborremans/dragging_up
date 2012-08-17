@@ -1,6 +1,15 @@
 class ToolsController < ApplicationController
+
   # GET /tools
   # GET /tools.json
+
+  before_filter :require_login, :except => [:show, :index]
+  before_filter :require_admin, :only => [:delete]
+
+  def require_admin
+    redirect_to root_url, notice: 'Nice try!' unless @user.role == "Admin"
+  end
+
   def index
     @tools = Tool.all
 
@@ -41,9 +50,10 @@ class ToolsController < ApplicationController
   # POST /tools.json
   def create
     @tool = Tool.new(params[:tool])
-
+    @tool.user_id = session[:user_id]
     respond_to do |format|
       if @tool.save
+
         format.html { redirect_to @tool, notice: 'Tool was successfully created.' }
         format.json { render json: @tool, status: :created, location: @tool }
       else

@@ -11,17 +11,25 @@
     </div>
   <% end %>
 
+ <div class="field">
+    <%= f.label :trade %><br />
+    <%= f.text_field :trade %> #will be a collection select
+  </div>
   <div class="field">
+    <%= f.label :Type %><br />
+    <%= f.select(:tool_type, [["Tool"],["Clothes"]], {:multiple => true})%>
+  </div>
+   <div class="field">
     <%= f.label :tool_name %><br />
     <%= f.text_field :tool_name %>
   </div>
   <div class="field">
-    <%= f.label :tool_type %><br />
-    <%= f.text_field :tool_type %>
-  </div>
-  <div class="field">
     <%= f.label :tool_price %><br />
     <%= f.number_field :tool_price %>
+  </div>
+  <div class="field">
+    <%= f.label :shipping_cost %><br />
+    <%= f.number_field :shipping_cost %>
   </div>
   <div class="field">
     <%= f.label :tool_condition %><br />
@@ -34,8 +42,7 @@
   <div class="field">
     <%= f.label :tool_picture %><br />
     <%= f.text_field :tool_picture %>
-  </div>
-  <div class="actions">
+
     <%= f.submit %>
   </div>
 <% end %>

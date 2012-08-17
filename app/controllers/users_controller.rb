@@ -1,6 +1,19 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+
+  before_filter :require_login, :only => [:edit, :creat, :new]
+  before_filter :require_admin, :only => [:delete]
+  before_filter :require_authorization, :only => [:delete, :edit]
+
+  def require_admin
+    redirect_to root_url, notice: 'Need to be admin!!' unless current_user.role == "Admin"
+  end
+
+  def require_authorization
+    redirect_to root_url, notice: 'Not authorized' unless session[:user_id] == params[:id].to_i
+  end
+
   def index
     @users = User.all
 

@@ -23,9 +23,9 @@
     <td><%= tool.tool_condition %></td>
     <td><%= tool.tool_description %></td>
     <td><%= tool.tool_picture %></td>
-    <td><%= link_to 'Show', tool %></td>
-    <td><%= link_to 'Edit', edit_tool_path(tool) %></td>
-    <td><%= link_to 'Destroy', tool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'See details', tool %></td>
+    <td><%#= link_to 'Edit', edit_tool_path(tool) %></td>
+    <td><%#= link_to 'Destroy', tool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
@@ -36,4 +36,4 @@ Mauris arcu nisl, eleifend ut fermentum nec, mattis eu lorem. Sed iaculis feugia
 
 <br />
 
-<%= link_to 'New Tool', new_tool_path %>
+

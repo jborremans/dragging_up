@@ -30,6 +30,6 @@
   <%= @tool.tool_picture %>
 </p>
 
-
+<%= link_to "Delete listing", tool_path, :confirm => 'Are you sure?', :method => :delete %>
 <%= link_to 'Edit', edit_tool_path(@tool) %> |
 <%= link_to 'Back', tools_path %>
