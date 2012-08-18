@@ -1,7 +1,7 @@
 class Cart < ActiveRecord::Base
   attr_accessible :user_id
   
-  has_many   :tools
   belongs_to :user
+  has_one    :cartitem
   
 end
