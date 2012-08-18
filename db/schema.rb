@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120818205633) do
+ActiveRecord::Schema.define(:version => 20120818221458) do
 
   create_table "cartitems", :force => true do |t|
     t.integer  "tool_id"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20120818205633) do
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "admin"
   end
 
 end
