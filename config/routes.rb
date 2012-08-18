@@ -1,4 +1,8 @@
 DraggingUp::Application.routes.draw do
+  get "cartitems/create"
+
+  get "cartitems/destroy"
+
   resources :carts
   
   get "sessions/new", :as => :signin
