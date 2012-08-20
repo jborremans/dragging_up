@@ -4,7 +4,7 @@ class DraggingMail < ActionMailer::Base
     def welcome_email(user)
       @user = user
       @url = "http://gmail.com/login"
-      mail (:to => user.email, :subject => "Welome to Dragging-up's Awesome Tool site")
+      mail(:to => user.email, :subject => "Welome to Dragging-up's Awesome Tool site")
   
   end
 end
