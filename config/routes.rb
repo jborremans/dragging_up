@@ -1,4 +1,8 @@
 DraggingUp::Application.routes.draw do
+  put "cartool/create"
+
+  delete "cartool/delete"
+
   get "cartitems/create"
 
   get "cartitems/destroy"
