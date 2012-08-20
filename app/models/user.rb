@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   # has_one :cartitem, => through => :cart
   has_one  :cart
   has_many :tools
-  
+    
 end
 
 
