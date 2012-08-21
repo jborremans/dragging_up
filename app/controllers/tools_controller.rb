@@ -1,6 +1,18 @@
 class ToolsController < ApplicationController
   # GET /tools
   # GET /tools.json
+  
+ before_filter :require_login, :except => [:show, :index]
+ before_filter :require_admin, :only => [:delete]
+ 
+ def require_admin
+         redirect_to root_url, notice: "Administrator Only" unless current_user.role == "Admin"
+       end
+ 
+def require_authorization
+  redirect_to root_url, notice: "Not autherized " unless session[:user_id] == params[:id].to_i
+end
+  
   def index
     @tools = Tool.all
 
@@ -41,6 +53,7 @@ class ToolsController < ApplicationController
   # POST /tools.json
   def create
     @tool = Tool.new(params[:tool])
+    @tool.user_id = session[:user_id]
 
     respond_to do |format|
       if @tool.save

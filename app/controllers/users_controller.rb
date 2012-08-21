@@ -1,6 +1,15 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+  
+  before_filter :require_login, :only => [:edit, :new]
+  before_filter :require_adnin, :only => [:delete]
+  before_filter :require_authorization, :only => [:delete, :edit]
+  
+  # def require_admin
+  #   redirect_to root_url, notice: 'Accessible only by administrator' unless current_user.role == "Admin"
+  
+
   def index
     @users = User.all
 
@@ -83,3 +92,6 @@ class UsersController < ApplicationController
     end
   end
 end
+
+
+
