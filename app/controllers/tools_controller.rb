@@ -3,16 +3,8 @@ class ToolsController < ApplicationController
   # GET /tools.json
   
  before_filter :require_login, :except => [:show, :index]
- before_filter :require_admin, :only => [:delete]
+ before_filter :require_authorization, :only => [:edit, :delete]
  
- 
- 
-def require_authorization
-  redirect_to root_url, notice: "Not autherized " unless session[:user_id] == params[:id].to_i 
-  
-  # :only => [:edit, :update, :delete]
-  
-end
   
   def index
     @tools = Tool.all

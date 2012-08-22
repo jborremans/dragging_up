@@ -14,11 +14,11 @@ class CartsController < ApplicationController
   # GET /carts/1.json
   def show
     @cart = Cart.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @cart }
-    end
+       
+       respond_to do |format|
+         format.html # show.html.erb
+         format.json { render json: @cart }
+       end
   end
 
   # GET /carts/new
