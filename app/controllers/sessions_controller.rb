@@ -1,9 +1,9 @@
 class SessionsController < ApplicationController
   
   
-  def require_authorization
-        redirect_to root_url, notice: 'Sorry, but you need authorization. Please Please sign-in or sign-up. Thank you' unless session[:user_id] == params[:id]
-      end
+  # def require_authorization
+  #         redirect_to root_url, notice: 'Sorry, but you need authorization. Please Please sign-in or sign-up. Thank you' unless session[:user_id] == params[:id]
+  #       end
       
       def new
         end

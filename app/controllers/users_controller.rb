@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   # GET /users.json
   
   before_filter :require_login, :only => [:edit, :new]
-  before_filter :require_adnin, :only => [:delete]
+  before_filter :require_admin, :only => [:delete]
+  before_filter :require_user,  :only => [:delete]
   before_filter :require_authorization, :only => [:delete, :edit]
   
   # def require_admin

@@ -1,11 +1,8 @@
 DraggingUp::Application.routes.draw do
-  put "cartool/create"
+  
+  post "cartool/create"
+  # delete "cartool/delete"
 
-  delete "cartool/delete"
-
-  get "cartitems/create"
-
-  get "cartitems/destroy"
 
   resources :carts
   
