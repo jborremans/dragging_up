@@ -5,7 +5,10 @@ class UsersController < ApplicationController
   before_filter :require_login, :only => [:edit, :delete, :show]
   before_filter :require_admin, :only => [:delete]
   before_filter :require_user,  :only => [:delete]
-  before_filter :redirect_if_not_authorized , :only => [:update, :edit, :destroy]
+  
+    before_filter :only => [ :update, :destroy ] do |action|
+      redirect_if_not_authorized(Comment.find(params[:id]).user_id)
+      end
   
   
   # def require_admin
