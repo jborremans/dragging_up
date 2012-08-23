@@ -2,10 +2,10 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   
-  before_filter :require_login, :only => [:edit, :delete]
+  before_filter :require_login, :only => [:edit, :delete, :show]
   before_filter :require_admin, :only => [:delete]
   before_filter :require_user,  :only => [:delete]
-  before_filter :require_authorization, :only => [:delete, :edit]
+  
   
   # def require_admin
   #   redirect_to root_url, notice: 'Accessible only by administrator' unless current_user.role == "Admin"

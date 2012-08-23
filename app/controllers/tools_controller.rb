@@ -4,7 +4,6 @@ class ToolsController < ApplicationController
   
  before_filter :require_login, :except => [:show, :index]
  before_filter :require_authorization, :only => [:edit, :delete]
- 
   
   def index
     @tools = Tool.all
