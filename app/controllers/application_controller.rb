@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   
   def redirect_if_not_authorized(user_id)
   if @current_user && @current_user.id != user_id
-  flash[:error] = 'You were not authorized to perform that action.'
+  flash[:error] = 'You are not authorized to perform this action.'
   redirect_to :back
   end
   end

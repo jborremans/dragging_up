@@ -3,7 +3,8 @@ class ToolsController < ApplicationController
   # GET /tools.json
   
  before_filter :require_login, :except => [:show, :index]
- before_filter :require_authorization, :only => [:edit, :delete]
+ # before_filter :require_authorization, :only => [:edit, :delete]
+ before_filter :redirect_if_not_authorized, :only => [:update, :edit, :destroy]
   
   def index
     @tools = Tool.all

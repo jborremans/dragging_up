@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   before_filter :require_login, :only => [:edit, :delete, :show]
   before_filter :require_admin, :only => [:delete]
   before_filter :require_user,  :only => [:delete]
+  before_filter :redirect_if_not_authorized , :only => [:update, :edit, :destroy]
   
   
   # def require_admin
