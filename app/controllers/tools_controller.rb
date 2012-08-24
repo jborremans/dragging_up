@@ -5,9 +5,11 @@ class ToolsController < ApplicationController
  before_filter :require_login, :except => [:show, :index]
  # before_filter :require_authorization, :only => [:edit, :delete]
  
-   before_filter :only => [ :update, :destroy ] do |action|
-     redirect_if_not_authorized(Comment.find(params[:id]).user_id)
-     end
+ before_filter :only => [ :update, :destroy ] do |action|
+       redirect_if_not_authorized(Tool.find(params[:id]).user_id)
+       end
+ 
+  
   
   def index
     @tools = Tool.all

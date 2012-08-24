@@ -1,7 +1,9 @@
 <h1>Home Page</h1>
-
-<%= notice %>
-
+<% if flash[:notice]%>
+  <h2 class="notice"> 
+     <%= flash[:notice] %>
+  </h2>
+<%end%>
 <% if @user.present? %>
   <%= @user.email %>
 <% end %>

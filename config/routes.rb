@@ -1,5 +1,7 @@
 DraggingUp::Application.routes.draw do
   
+  resources :orders
+
   post "cartool/create"
   # delete "cartool/delete"
 

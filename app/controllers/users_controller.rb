@@ -5,11 +5,19 @@ class UsersController < ApplicationController
   before_filter :require_login, :only => [:edit, :delete, :show]
   before_filter :require_admin, :only => [:delete]
   before_filter :require_user,  :only => [:delete]
-  
-    before_filter :only => [ :update, :destroy ] do |action|
-      redirect_if_not_authorized(Comment.find(params[:id]).user_id)
+    # 
+    # before_filter :only => [ :update, :destroy ] do |action|
+    #     redirect_if_not_authorized(User.find(params[:id]).user_id)
+    #     end
+  before_filter :require_correct_user, :only => [:show, :edit, :delete]
+     def require_correct_user
+      u = User.find(params[:id])
+      
+      if u != @user
+           flash[:notice] = "Not authorized"
+           redirect_to root_url
       end
-  
+  end
   
   # def require_admin
   #   redirect_to root_url, notice: 'Accessible only by administrator' unless current_user.role == "Admin"
