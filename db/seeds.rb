@@ -17,4 +17,11 @@ if Rails.env.development?
     # t.string   "tool_picture"
     t.save
   end
+  
+  user_names = ['Scott Hugheus', 'Emily Ellison', 'Noah Gordon', 'Kati Lee', 'Jeff Cohen', 'Greg Meza', 'Enrique Quiroga', 'Joseph Borremans', 'Pauline Gijse', 'Kasper Vandevaardekenshoeve', 'Greg Williams']
+  
+  2.times do |u|
+    u = User.new
+    u.save
+  end
 end

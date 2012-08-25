@@ -1,5 +1,7 @@
 DraggingUp::Application.routes.draw do
   
+  get "about_us/show"
+
   resources :orders
 
   post "cartool/create"
