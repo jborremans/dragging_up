@@ -3,7 +3,6 @@ class User < ActiveRecord::Base
   
   has_secure_password
 
-  # has_one :cartitem, => through => :cart
   has_one  :cart
   has_many :tools
     

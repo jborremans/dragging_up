@@ -4,4 +4,5 @@ class Cartool < ActiveRecord::Base
   has_many   :tools
   belongs_to :user
   belongs_to :cart
+  belongs_to :order
 end
