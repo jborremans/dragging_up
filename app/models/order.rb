@@ -5,4 +5,6 @@ class Order < ActiveRecord::Base
   belongs_to :user
   has_many   :cartools
   
+  attr_accessor :card_number, :card_verification 
+  
 end
