@@ -74,4 +74,5 @@ DraggingUp::Application.configure do
       :password => "1345770280",
       :signature => "ALUB7KdN9BLjb-GBwpM3eA0azbV5AUWDZWlqw--Eurd87pfWNx9-XoXl"
     )
+  end
 end
