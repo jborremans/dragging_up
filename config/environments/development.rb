@@ -35,4 +35,15 @@ DraggingUp::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  config.after_initialize do
+    
+    ActiveMerchant::Billing::Base.mode = :test
+
+    ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+      :login => "joseph_1345770257_biz@gmail.com",
+      :password => "1345770280",
+      :signature => "ALUB7KdN9BLjb-GBwpM3eA0azbV5AUWDZWlqw--Eurd87pfWNx9-XoXl"
+    )
+   
 end
