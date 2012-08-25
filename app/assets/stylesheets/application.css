@@ -11,3 +11,227 @@
  *= require_self
  *= require_tree .
  */
+
+
+
+body {
+margin: 0 auto;
+padding-top: 60px;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 13px;
+line-height: 18px;
+color: #333;
+background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/dust.png");
+}
+
+
+
+.top {
+	font-family: 'Lusitana', serif;
+	background: #eca;
+	text-indent: 30px;
+	font-size: 45px;
+	padding-top: 10px;
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+
+}
+
+
+.main-navbar {
+	width: 100%;
+	height: 40px;
+	text-indent: 10px;
+	background: #731;
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 40px;
+	color: white;
+	display: inline;
+	
+
+}
+
+
+.login {
+	float: right;
+	font-size: 12px;
+	padding-right: 10px;
+	padding-top: 11px;
+	margin-right: 15px;
+
+
+}
+
+.top a {
+	text-decoration: none;
+	color: black;
+}
+
+.top a:hover {
+	background: #731;
+	color: white;
+}
+
+
+.nav li {
+	margin-right: 26px;
+	list-style: none;
+	float: right;
+	position: relative;
+	font-family: arial;
+}
+
+.nav a {
+	text-decoration: none;
+	color: white;
+	display: block;
+}
+
+
+
+
+
+.nav li a:hover {
+	
+	
+	border-radius: 5px;
+	color: #eca;
+}
+
+
+
+header {
+	padding: 10px;
+
+}
+
+.heading {
+	font-size: 18px;
+	line-height: 5px;
+	text-indent: 20px;
+}
+
+
+
+
+.content-here {
+	height: ;
+	width: 500px;
+}
+
+
+
+
+h1 {
+	/*font-family: 'trade gothic', Arial, Helvetica, sans-serif;    */
+    font-family: 'PT Sans Narrow', sans-serif;
+	font-size:2em;
+	font-weight: normal;
+
+}
+
+h1 a {
+	text-decoration: none;
+	color: black;
+	
+}
+
+h1 a:hover {
+	color: #eca;
+
+}
+
+h1 a:active {
+	background: #731;
+}
+
+.cworker, .pipefitter, .mechanic, .electrician, .tradesperson1, .tradesperson2, .tradesperson3, .tradesperson4 {
+	width: 26%;
+	padding:10px 20px 20px;
+	margin:10px;
+	border:1px solid #e7e2d7;
+	border-radius:8px;
+	-webkit-border-radius:.8em;
+	-moz-border-radius:.8em;
+	background:#fff;
+	float: left;
+}
+
+article {
+	float:right;
+	width:620px;
+	text-align:left;
+}
+
+article h1 {
+	/*background-color: #ef8700;*/
+	color:#999;
+	padding:33px 10px 12px 30px;
+	margin-bottom: 20px;
+	text-shadow:0 1px 0 #403232;
+	border-bottom: 3px solid #eca;
+}
+
+
+
+article p:first-of-type {
+	font-family:Helvetica, Arial, serif;
+	border-top:1px dotted #968765;
+	border-bottom:1px dotted #968765;
+	padding:10px 0px;
+	color:#333;
+}
+
+.cimage {
+background: url(../images/cworker.jpg) right top no-repeat;
+	}
+	
+.pimage {
+background: url(../images/pipefitter.jpg) right top no-repeat;
+	}
+	
+.mimage {
+background: url(../images/mechanic.jpg) right top no-repeat;
+	}
+	
+.eimage {
+background: url(../images/electrician.jpg) right top no-repeat;
+	}
+	
+.t1image, .t2image, .t3image, .t4image {
+background: url(../images/under.jpg) right top no-repeat;
+	}
+
+.cimage, .pimage, .mimage, .eimage, .t1image, .t2image, .t3image, .t4image {
+	float: left;
+	width: 80px;
+	height: 80px;
+	margin-right: 8px;
+	}
+
+
+
+
+
+
+
+
+footer {
+	width: 100%;
+	height: 40px;
+	color: white;
+	text-indent: 10px;
+	background: #731;
+	line-height: 44px;
+	position: relative;
+	bottom: -750px;
+	
+	
+
+}

@@ -1,33 +1,51 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>DraggingUp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dragging Up</title>    
+    <link rel="stylesheet" href="styles/application.css">
+    <link href='http://fonts.googleapis.com/css?family=Lusitana:700' rel='stylesheet' type='text/css'>
+   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-	<div id="container">
-		<header>
-			<h1><%= link_to "Dragging Up", root_url %></h1>
-			<nav>
-				<ul>
-				  
-          <li><%= link_to "About Us", about_us_show_url %></li>
-          <li><%= link_to " For Sale Tools Listing", tools_url %></li>
-          <li><%= link_to "Help", help_url %></li>
-          <li><%= link_to "Contact", contactontact_url %></li>
+  </head>
+
+
+  <body>
+    <div class="top"><%= link_to "Dragging Up", root_url %><div class="login"><%= link_to "Sign In", signin_url %>| <%= link_to "Sign Up", new_user_url %></div></div>
+    <div class="main-navbar">
+
+      <ul class="nav">
+
+    <li><%= link_to "Our Story", about_us_show_url %></li>
+    <li><%= link_to "All Tools For Sale", tools_url %></li>
+    <li><%= link_to "Help", help_url %></li>
+    <li><%= link_to "Contact Us", contactontact_url %> </li>
+
+      </ul>
+
+  <p class="heading">Where Union Tradespeople Find Tools</p>
+
+  </div>
+
+      <header><h1></h1></header>
+
+
+      <section>
+<div class="content-here"> </div>
+</section>
         
           <% if session[:user_id] %>
           
-          <li><%= link_to "My Profile", user_url(session[:user_id]) %></li>					
+        <li><%= link_to "My Profile", user_url(session[:user_id]) %></li>					
 					<li><%= link_to "Sell Your Tools", new_tool_url %></li>					
 					<li><%= link_to "My Shopping Cart", '#' %></li>
 					<li><%= link_to "Sign Out", signout_url %></li>
 					
           <% else %>
           
-          <li><%= link_to "Sign Up", new_user_url %></li>
-          <li><%= link_to "Sign In", signin_url %></li>
+        
           
           <% end %>
          
@@ -46,9 +64,9 @@
 		</div>
 		</br>
 		</br>
-		<footer>
-			&copy;2012 Dragging Up, Inc.  Got tools to sell? or keep 'em to yourself!
-		</footer>
+			<footer>© Dragging Up 2012</footer>
 	</div>
-</body>
+  </body>
 </html>
+
+
