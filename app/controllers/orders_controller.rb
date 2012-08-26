@@ -40,18 +40,16 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(params[:order])
-
-    respond_to do |format|
+    @order = current_cart.build_order(params[:order])
+    @order.ip_address = request.remote_ip
       if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
-        format.json { render json: @order, status: :created, location: @order }
+        # flash[:notice] = 'Order was successfully created.'
+        #         redirect_to orders_url
       else
-        format.html { render action: "new" }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
+        render :action => 'new'
       end
     end
-  end
+
 
   # PUT /orders/1
   # PUT /orders/1.json

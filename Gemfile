@@ -7,6 +7,8 @@ gem 'rails', '3.2.6'
 
 gem 'activemerchant', :require => 'active_merchant'
 
+gem "faker", "~> 1.0.1"
+
 
 group :development do
  gem 'sqlite3'

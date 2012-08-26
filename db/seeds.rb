@@ -20,8 +20,15 @@ if Rails.env.development?
   
   user_names = ['Scott Hugheus', 'Emily Ellison', 'Noah Gordon', 'Kati Lee', 'Jeff Cohen', 'Greg Meza', 'Enrique Quiroga', 'Joseph Borremans', 'Pauline Gijse', 'Kasper Vandevaardekenshoeve', 'Greg Williams']
   
-  2.times do |u|
+  user_names.length.each do |u|
     u = User.new
+    u.name = user_names[u]
+    u.password = rand(10000..100000)
+    u.email = rand(Faker::Internet.email)
     u.save
+    
+    c = Cart.new
+    c.user_id = u.id
+    c.save
   end
 end

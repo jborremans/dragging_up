@@ -7,4 +7,6 @@ class Order < ActiveRecord::Base
   
   attr_accessor :card_number, :card_verification 
   
+  
+  
 end
