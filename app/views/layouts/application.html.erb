@@ -21,7 +21,7 @@
           
           <li><%= link_to "My Profile", user_url(session[:user_id]) %></li>					
 					<li><%= link_to "Sell Your Tools", new_tool_url %></li>					
-					<li><%= link_to "My Shopping Cart", cart_url(Cart.find_by_user_id(session[:user_id]))%></li>
+          <li><%= link_to "My Shopping Cart", cart_url(Cart.find_by_user_id(session[:user_id]))%></li>
 					<li><%= link_to "Sign Out", signout_url %></li>
 					
           <% else %>

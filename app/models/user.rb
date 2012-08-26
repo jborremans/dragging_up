@@ -5,6 +5,14 @@ class User < ActiveRecord::Base
 
   has_one  :cart
   has_many :tools
+  
+  after_create :create_cart
+  
+  def create_cart
+    @cart = Cart.new
+    @cart.user_id = self.id
+    @cart.save
+  end
     
 end
 
