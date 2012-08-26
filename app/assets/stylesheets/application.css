@@ -24,7 +24,7 @@ color: #333;
 background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/dust.png");
 }
 
-
+/*start template nav*/
 
 .top {
 	font-family: 'Lusitana', serif;
@@ -94,12 +94,7 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 }
 
 
-
-
-
 .nav li a:hover {
-	
-	
 	border-radius: 5px;
 	color: #eca;
 }
@@ -118,109 +113,138 @@ header {
 }
 
 
+/*end template nav*/
 
+
+#content {
+	padding-bottom: 200px;
+}
 
 .content-here {
 	height: ;
 	width: 500px;
 }
 
+/*end template nav
+*/
+
+
+/*
+Form start*/
 
 
 
-h1 {
-	/*font-family: 'trade gothic', Arial, Helvetica, sans-serif;    */
-    font-family: 'PT Sans Narrow', sans-serif;
-	font-size:2em;
-	font-weight: normal;
+/*
+register form
+*/
 
-}
-
-h1 a {
-	text-decoration: none;
-	color: black;
-	
-}
-
-h1 a:hover {
-	color: #eca;
-
-}
-
-h1 a:active {
-	background: #731;
-}
-
-.cworker, .pipefitter, .mechanic, .electrician, .tradesperson1, .tradesperson2, .tradesperson3, .tradesperson4 {
-	width: 26%;
-	padding:10px 20px 20px;
-	margin:10px;
-	border:1px solid #e7e2d7;
-	border-radius:8px;
-	-webkit-border-radius:.8em;
-	-moz-border-radius:.8em;
-	background:#fff;
-	float: left;
-}
-
-article {
-	float:right;
-	width:620px;
-	text-align:left;
-}
-
-article h1 {
-	/*background-color: #ef8700;*/
-	color:#999;
-	padding:33px 10px 12px 30px;
-	margin-bottom: 20px;
-	text-shadow:0 1px 0 #403232;
-	border-bottom: 3px solid #eca;
-}
-
-
-
-article p:first-of-type {
-	font-family:Helvetica, Arial, serif;
-	border-top:1px dotted #968765;
-	border-bottom:1px dotted #968765;
-	padding:10px 0px;
-	color:#333;
-}
-
-.cimage {
-background: url(../images/cworker.jpg) right top no-repeat;
-	}
-	
-.pimage {
-background: url(../images/pipefitter.jpg) right top no-repeat;
-	}
-	
-.mimage {
-background: url(../images/mechanic.jpg) right top no-repeat;
-	}
-	
-.eimage {
-background: url(../images/electrician.jpg) right top no-repeat;
-	}
-	
-.t1image, .t2image, .t3image, .t4image {
-background: url(../images/under.jpg) right top no-repeat;
+#register {
+	float: right;
 	}
 
-.cimage, .pimage, .mimage, .eimage, .t1image, .t2image, .t3image, .t4image {
-	float: left;
+form{
+	width:300px;
+	padding: 0px;
+	margin: 0px;
+	border: 1px solid #CCC;
+	}
+	
+fieldset {
+   border: 0px;
+   width: 266px;
+   padding-bottom: 50px;
+	}
+	
+legend {
+	width: 100%;
+	height: 65px;
+	border: 1px solid #CCC;
+
+	padding: 0px;
+	margin-bottom: 8px;
+	
+background: #f9f1e3; /* Old browsers */
+background: -moz-linear-gradient(top,  #f9f1e3 0%, #dfcdb1 32%, #f4e9d8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f1e3), color-stop(32%,#dfcdb1), color-stop(100%,#f4e9d8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f1e3', endColorstr='#f4e9d8',GradientType=0 ); /* IE6-9 */
+	}
+	
+legend p {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 13px;
+color: #333;
+padding-left: 12px;
+	}
+	
+legend p span {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 24px;
+color: #731;
+	}
+	
+label, input {
+margin-bottom: 18px;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 12px;
+font-weight: bold;
+line-height: 18px;
+}
+	
+label {
+	color: #666;
 	width: 80px;
-	height: 80px;
-	margin-right: 8px;
+	float: left;
+	/*clear helps break filed boxes*/
+	clear: both;
+		}
+		
+fieldset input{
+	width: 155px;
+	float: right;
+	color: #999;
+	line-height: 2em;
+		}
+		
+input[type='text'], [type='email']{
+	background: #fff;
+	}
+	
+	input[type='submit'], input[type='reset']{
+		
+		padding: 8px;
+			clear: both;
+		}
+		
+		input:focus {
+			background: yellow;
+			}
+			
+/*
+sign in form
+*/
+
+#signin {
+	float: right;
+	padding: 0px;
 	}
 
+#signin p a {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+	text-decoration: none;
+	padding-left: 14px;
+}
+/* End Form CSS*/
 
+.clear {
+	clear: both;
+}
 
-
-
-
-
+/* start template footer*/
 
 footer {
 	width: 100%;
@@ -229,9 +253,14 @@ footer {
 	text-indent: 10px;
 	background: #731;
 	line-height: 44px;
-	position: relative;
-	bottom: -750px;
-	
-	
+	/*margin-top: 300px;*/
+
+/*end footer template*/
 
 }
+
+
+
+
+
+
