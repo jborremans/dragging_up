@@ -1,5 +1,11 @@
 <h1> Tools For Sale Page</h1>
 
+<%= form_tag tools_url, :method => 'get' do %>
+<%= label_tag :keyword, 'Search' %>
+<%= text_field_tag :keyword, nil, :placeholder => 'Search' %>
+<%end%>
+
+
 <table>
   <tr>
     <th>Tool name</th>

@@ -15,10 +15,15 @@ class ToolsController < ApplicationController
   
   
   def index
-    @tools = Tool.all
+    if params[:keyword].present?
+      @tools = Tool.where("tool_name LIKE ?", "%#{params[:keyword]}%")
+      #@tools = Tool.find_all_by_tool_name(params[:keyword])
+    else
+      @tools = Tool.all
+    end
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html #index.html.erb
       format.json { render json: @tools }
     end
   end
