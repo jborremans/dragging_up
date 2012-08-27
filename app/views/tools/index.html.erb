@@ -24,7 +24,7 @@
     <td><%= tool.tool_condition %></td>
     <td><%= tool.tool_description %></td>
     <td>#<%= tool.tool_picture %></td>
-    <td><%= link_to 'Add to Cart', "#" %></td>
+    <td><%= link_to 'Add to Cart', cart_url %></td>
     <td><%= link_to 'Show', tool_url(tool.id) %></td>
     <td><%= link_to 'Edit', edit_tool_path(tool.id) %></td>
     <td><%= link_to 'Destroy', tool_url(tool.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -27,7 +27,15 @@ if Rails.env.development?
      # v => User.new
      v.name = u
      # User.new.name = 'Scott Hugeus'
-     v.password = rand(10000..100000).to_s
+     
+     # random = rand(10000..100000).to_s
+     #      v.password = random
+     #      v.password_confirmation = random
+     
+     #  Consistency for testing and access all accounts
+     v.password = 'zebra'
+     v.password_confirmation = 'zebra'
+     
      v.email = Faker::Internet.email
      v.save
      
