@@ -15,16 +15,19 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <b>Password digest:</b>
-  <%= @user.password_digest %>
-</p>
-
+<div id = "tools">
+<div>My listings</div>
+<% @user.tools.each do |tool| %>
+<p>Tool name: <%=tool.tool_name %>, Price: <%=tool.tool_price %> 
+<%= link_to "edit", edit_tool_path(tool) %>  <%= link_to 'Delete listing', tool_url(tool), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<%#= link_to "remove", asset, :confirm => 'Are you sure?', :method => :delete %>
+</div>
+<%end%>
 
 
 
 <ul>
-<%= link_to 'Sell your Tools here!', new_tool_url %>
+<%= link_to 'Sell your Tools here!', new_tool_url %> |
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back to Home', root_url %>
 </ul>

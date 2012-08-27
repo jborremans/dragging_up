@@ -1,5 +1,11 @@
 <h1> Tools For Sale Page</h1>
 
+<%= form_tag tools_url, :method => 'get' do %>
+<%= label_tag :keyword, 'Search' %>
+<%= text_field_tag :keyword, nil, :placeholder => 'Search' %>
+<%end%>
+
+
 <table>
   <tr>
     <th>Tool name</th>
@@ -24,10 +30,13 @@
     <td><%= tool.tool_condition %></td>
     <td><%= tool.tool_description %></td>
     <td>#<%= tool.tool_picture %></td>
-    <td><%= link_to 'Add to Cart', cart_url %></td>
+    <% if session[:user_id].present? %>
+    <td><%= link_to 'Add to Cart', cart_url(Cart.find_by_user_id(session[:user_id]))%> | </td>
+    <% else %>
+     <td><%= link_to 'Sign in to Buy', signin_url %></td> 
+    <% end %>
     <td><%= link_to 'Show', tool_url(tool.id) %></td>
-    <td><%= link_to 'Edit', edit_tool_path(tool.id) %></td>
-    <td><%= link_to 'Destroy', tool_url(tool.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+   
   </tr>
 <% end %>
 </table>
