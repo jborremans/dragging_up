@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
 
   has_one  :cart
   has_many :tools
+  has_many :cartool
   
   after_create :create_cart
   

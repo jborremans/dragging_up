@@ -1,8 +1,13 @@
 class Cartool < ActiveRecord::Base
-  attr_accessible :cart_id, :tool_id, :user_id
+  attr_accessible :cart_id, :tool_id, :user_id, :cartool_id
   
   has_many   :tools
   belongs_to :user
   belongs_to :cart
   belongs_to :order
+  belongs_to :cartool
+  
+  def full_price
+    number_to_currency(Tool.find_by_id(self.tool_id) * quantity)
+  end 
 end
