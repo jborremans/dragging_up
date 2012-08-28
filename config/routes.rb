@@ -17,7 +17,7 @@ DraggingUp::Application.routes.draw do
   resources :tools
   resources :users
   
-  root to: 'pages#home'
+  root to: 'pages#home', as: :home
   
   get '/help' => 'pages#help', as: :help
   get '/contactontact' => 'pages#contact'
