@@ -7,10 +7,9 @@ class ToolsController < ApplicationController
  
  before_filter :require_authorize, :only => [:update, :destroy] 
 
- def require_authorize
-   @tool = Tool.find(params[:id])
-    redirect_to root_url, notice: "Not authorized " unless session[:user_id] == @tool.user_id
-  end
+ before_filter :only => [:update, :destroy] do |action|
+   redirect_if_not_authorized(Tool.find(params[:id]).user_id)
+ end
  
   
   

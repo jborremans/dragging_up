@@ -1,7 +1,7 @@
 class CartoolController < ApplicationController
   def create
       @tool = Tool.find(params[:tool_id])
-      @cart_item = Cartool.new(tool_id: @beer.id, quantity: 1)
+      @cart_item = Cartool.new(tool_id: @tool.id, quantity: 1)
       @cart_item.cart_id = @current_user.cart.id
       if @cart_item.save
         flash[:success] = "Added #{@tool.name} to your cart."

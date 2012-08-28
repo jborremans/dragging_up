@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 
   has_one  :cart
   has_many :tools
-  has_many :cartool, through: :cart
+  has_many :cartools, through: :cart
   
   validates :name, presence: true
    VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
