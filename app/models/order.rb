@@ -4,6 +4,7 @@ class Order < ActiveRecord::Base
   belongs_to :cart
   belongs_to :user
   has_many   :cartools
+  has_many   :transactions, :class => "OrderTransaction"
   
   attr_accessor :card_number, :card_verification 
   
