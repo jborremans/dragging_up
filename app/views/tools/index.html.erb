@@ -1,3 +1,17 @@
+<% if @current_user.present? && @current_user.cart_items.present? %>
+	<h1>My Shopping Cart</h1>
+	<ul>
+	<% @current_user.cart.cart_items.each do |cart_item| %>
+		<li>
+			<%= cart_item.tool.name %>: <%= number_to_currency(cart_item.tool.price) %>
+			| <%= link_to 'Remove from Cart', cart_item_url(cart_item), method: :delete, confirm: "Are you sure you want to remove #{cartool.tool.name} from your cart?" %>
+		</li>
+	<% end %>
+	</ul>
+<% end %>
+
+
+
 <h1> Tools For Sale Page</h1>
 
 <%= form_tag tools_url, :method => 'get' do %>

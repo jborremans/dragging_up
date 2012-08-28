@@ -3,6 +3,7 @@ DraggingUp::Application.routes.draw do
   get "about_us/show"
 
   resources :orders
+  resources :cartools, only: [:create, :destroy]
 
   post "cartool/create"
   # delete "cartool/delete"

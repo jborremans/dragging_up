@@ -5,7 +5,14 @@ class User < ActiveRecord::Base
 
   has_one  :cart
   has_many :tools
-  has_many :cartool
+  has_many :cartool, through: :cart
+  
+  validates :name, presence: true
+   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+   validates :email, presence: true, 
+                     format: { with: VALID_EMAIL_REGEX },
+                     uniqueness: { case_sensitive: false }
+  
   
   after_create :create_cart
   
