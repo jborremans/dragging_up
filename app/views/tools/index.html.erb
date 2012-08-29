@@ -1,4 +1,4 @@
-<% if @current_user.present? && @current_user.cart_items.present? %>
+<% if @current_user.present? && @current_user.cartools.present? %>
 	<h1>My Shopping Cart</h1>
 	<ul>
 	<% @current_user.cart.cart_items.each do |cart_item| %>
@@ -45,7 +45,8 @@
     <td><%= tool.tool_description %></td>
     <td>#<%= tool.tool_picture %></td>
     <% if session[:user_id].present? %>
-    <td><%= link_to 'Add to Cart', cart_url(Cart.find_by_user_id(session[:user_id]))%> | </td>
+		<!-- Create a key called tool_id in your params hash and pass it the id of your tool -->
+    <td><%= link_to 'Add to Cart', cartools_url(tool_id: tool.id), method: :post %> | </td>
     <% else %>
      <td><%= link_to 'Sign in to Buy', signin_url %></td> 
     <% end %>

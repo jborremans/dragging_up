@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  # Run the before_filter current user so the instance variable @current_user is available to us
+  # on every page!
+  
+  before_filter :current_user
   
   helper_method :current_user
     

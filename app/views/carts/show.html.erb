@@ -1,5 +1,3 @@
-<% if @current_user.present? && @current_user.cart_items.present? %>
-
 <h1>My Shopping Cart | Dragging-Up</h1>
 
 </br>
@@ -12,27 +10,11 @@
 </p>
 
 <ul> 
-  <% @tools.each do |tool| %>
-  <% @current_user.cart.cartool.each.do |cartool| %>
+  <% @current_user.cart.cartools.each do |cartool| %>
     <li> <%= cartool.tool.name %> : <%= number_to_currency(cartool.tool.price) %>
          <%= link_to 'Remove from Cart', cartool_url(cartool), method:delete, confirm: "Are you sure you want to remove #{cartool.tool.name} from your cart?" %>
     </li>
     <% end %>
-</ul>
-<% end %>
-
-<h1>Tools for Sale</h1>
-
-<ul>
-  <% @tools.each do |tool| %>
-  <li>
-    <%= link_to tool.name, tool_url(tool) %>: <%= number_to_currency(tool.price) %>
-    |<%= link_to 'Edit', '#' %>
-    |<%= link_to 'Remove', '#' %>
-    |<%= link_to 'Back to Shopping', tools_url %> |
-    |<%= link_to 'Checkout', '#' %>
-  </li>
-  <% end %>
-</ul>
+</ul>	
 
 

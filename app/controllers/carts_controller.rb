@@ -1,6 +1,10 @@
 class CartsController < ApplicationController
+  
+  before_filter :require_login, :only => [ :show ]
+  
   # GET /carts
   # GET /carts.json
+  
   def index
     @carts = Cart.all
 
