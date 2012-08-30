@@ -3,7 +3,7 @@
 	<ul>
 	<% @current_user.cart.cartools.each do |cart_item| %>
 		<li>
-			<%= cart_item.tool_id %>: 
+			<%= cart_item.tool.name %>: <%= number_to_currency(cart_item.tool.price) %> 
 			
 		</li>
 	<% end %>
