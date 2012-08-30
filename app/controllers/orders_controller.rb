@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  
   # GET /orders
   # GET /orders.json
   def index
@@ -83,4 +84,5 @@ class OrdersController < ApplicationController
       format.json { head :no_content }
     end
   end
+end
 end
