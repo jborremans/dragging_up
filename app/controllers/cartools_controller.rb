@@ -16,10 +16,10 @@ class CartoolsController < ApplicationController
 
     def destroy
       @cart_item = Cartool.find(params[:id])
-      @dup = Cartool.find(params[:id])
+      @duplicate = @cart_item
       @cart_item.destroy
-      flash[:notice] = "#{@dup.tool.name} has been removed from your cart."
-      redirect_to user_url(@current_user)
+      flash[:notice] = "#{@duplicate.tool.tool_name} has been removed from your cart."
+      redirect_to :back
     end
- 
 end
+
