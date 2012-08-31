@@ -3,7 +3,7 @@
 	<ul>
 	<% @current_user.cart.cartools.each do |cart_item| %>
 		<li>
-			<%= cart_item.tool.name %>: <%= number_to_currency(cart_item.tool.price) %> 
+    # <%= cart_item.tool.name %>: <%= number_to_currency(cart_item.tool.price) %> 
 			
 		</li>
 	<% end %>
@@ -13,6 +13,8 @@
 
 
 <h1> Tools For Sale Page</h1>
+
+<%= paginate @tools %>
 
 <%= form_tag tools_url, :method => 'get' do %>
 <%= label_tag :keyword, 'Search' %>
@@ -55,10 +57,6 @@
   </tr>
 <% end %>
 </table>
-
-<p>
-Mauris arcu nisl, eleifend ut fermentum nec, mattis eu lorem. Sed iaculis feugiat nisi et ullamcorper. Curabitur dictum nisl sed metus sagittis ullamcorper. Fusce risus enim, cursus non feugiat in, consequat in ligula. Morbi auctor laoreet mi vel rhoncus. Cras aliquet placerat rhoncus. Maecenas quis mi vel enim ultrices mattis a non magna. Integer commodo enim a augue lacinia dapibus. Sed nisi lacus, pellentesque eu malesuada et, fringilla ut libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a lacus mauris, sed egestas metus.
-</p>
 
 <br />
 <ul>

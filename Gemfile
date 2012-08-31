@@ -9,6 +9,8 @@ gem 'activemerchant', :require => 'active_merchant'
 
 gem "faker", "~> 1.0.1"
 
+gem 'kaminari'
+
 
 group :development do
  gem 'sqlite3'
