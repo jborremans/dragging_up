@@ -7,7 +7,7 @@ class CartoolsController < ApplicationController
       @cart_item.cart_id = @current_user.cart.id
       if @cart_item.save
         flash[:success] = "Added #{@tool.tool_name} to your cart."
-        redirect_to root_url
+        redirect_to :back
       else
         flash[:error] = "There was an error adding #{@tool.tool_name} to your cart. Could you try again?"
         redirect_to :back
