@@ -17,11 +17,11 @@ class ToolsController < ApplicationController
    
     if params[:keyword].present?
       @tools = Tool.where("tool_name LIKE ?", "%#{params[:keyword]}%")
-      @tools.page(params[:page])
-      #@tools = Tool.find_all_by_tool_name(params[:keyword])
+      @tools = Tool.order(:tool_name).page params[:page]
+      @tools = Tool.find_all_by_tool_name(params[:keyword])
     else
       @tools = Tool.all
-      @tools.page(params[:page])
+       @tools = Tool.order(:tool_name).page params[:page]
     end
 
     respond_to do |format|
