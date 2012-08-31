@@ -1,0 +1,15 @@
+<h1>My Shopping Cart | Dragging-Up</h1>
+
+</br>
+
+<p id="notice"><%= notice %></p>
+
+
+
+<ul> 
+  <% @current_user.cart.cartools.each do |zebra| %>
+    <li> <%= zebra.tool.tool_name %> : <%= number_to_currency(zebra.tool.tool_price) %>
+         <%= link_to 'Remove from Cart', cartool_url(zebra), method: :delete, confirm: "Are you sure you want to remove #{zebra.tool.tool_name} from your cart?" %>
+    </li>
+    <% end %>
+</ul>

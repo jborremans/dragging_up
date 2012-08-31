@@ -1,23 +1,5 @@
-<h1>My Shopping Cart | Dragging-Up</h1>
-
-</br>
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>User:</b>
-  <b><%= @cart.user_id %></b>
-</p>
-
-<ul> 
-  <% @current_user.cart.cartools.each do |cartool| %>
-    <li> <%= cartool.tool.name %> : <%= number_to_currency(cartool.tool.price) %>
-         <%= link_to 'Remove from Cart', cartool_url(cartool), method:delete, confirm: "Are you sure you want to remove #{cartool.tool.name} from your cart?" %>
-    </li>
-    <% end %>
-</ul>	
+<%= render 'cart' %>
 
 
 
 
-<

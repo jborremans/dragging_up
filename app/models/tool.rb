@@ -3,6 +3,6 @@ class Tool < ActiveRecord::Base
   
 
   belongs_to :user
-  belongs_to :cartool
+  has_many :cartools
   
 end
