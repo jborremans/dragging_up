@@ -26,6 +26,10 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 
 /*start template nav*/
 
+.imageholder {
+	background-image
+}
+
 .top {
 	font-family: 'Lusitana', serif;
 	background: #eca;
@@ -45,6 +49,8 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 	font-size: 12px;
 	float: right;
 	list-style: none;
+	text-align: center;
+	padding-right: 29px;
 
 }
 
@@ -57,7 +63,7 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 	width: 100%;
 	height: 40px;
 	text-indent: 10px;
-	background: #731;
+	background: sandybrown;
 	position: fixed;
 	right: 0;
 	left: 0;
@@ -82,10 +88,11 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 .top a {
 	text-decoration: none;
 	color: black;
+	font-weight: bold;
 }
 
 .top a:hover {
-	background: #731;
+	background: sandybrown;
 	color: white;
 }
 
@@ -107,7 +114,7 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 
 .nav li a:hover {
 	border-radius: 5px;
-	color: #eca;
+	color: black;
 }
 
 .heading {
@@ -185,7 +192,7 @@ footer {
 	height: 40px;
 	color: white;
 	text-indent: 10px;
-	background: #731;
+	background: sandybrown;
 	line-height: 44px;
 	/*margin-top: 300px;*/
 

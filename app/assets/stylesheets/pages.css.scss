@@ -27,7 +27,7 @@ h1 a {
 }
 
 h1 a:hover {
-	color: #eca;
+	color: sandybrown;
 
 }
 
@@ -35,15 +35,21 @@ h1 a:active {
 	background: #731;
 }
 
+header {
+	padding-top: 30px;
+	padding-left: 21px;
+	font-size: 30px;
+}
+
 
 section {
 	margin-top: 20px;
-	margin-left: 50px;
+	margin-left: 71px;
 	
 }
 
 .box {
-	width: 21%;
+	width: 275px;
 	padding: 0px 0px 0px;
 	margin: 14px;
 	border:1px solid #e7e2d7;
@@ -73,7 +79,7 @@ article h1 {
 	padding:33px 10px 12px 30px;
 	margin-bottom: 20px;
 	text-shadow:0 1px 0 #403232;
-	border-bottom: 3px solid #eca;
+	border-bottom: 3px solid sandybrown;
 }
 
 
@@ -249,7 +255,7 @@ footer {
 	height: 40px;
 	color: white;
 	text-indent: 10px;
-	background: #731;
+	background: sandybrown;
 	line-height: 44px;
 	margin-top: 300px;
 }
