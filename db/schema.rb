@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120830204110) do
+ActiveRecord::Schema.define(:version => 20120901193808) do
 
   create_table "cartools", :force => true do |t|
     t.integer  "tool_id"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20120830204110) do
     t.string   "ip_address"
     t.string   "card_type"
     t.date     "card_expiration_date"
+    t.integer  "cart_id"
   end
 
   create_table "tools", :force => true do |t|

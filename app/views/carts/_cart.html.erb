@@ -13,4 +13,9 @@
     </li>
     <% end %>
 </ul>
-<p>Total Price of tools in cart      <%= number_to_currency @current_user.cart.total_price %></p>
+<p>Total Price of tools in cart<%= number_to_currency @current_user.cart.total_price %></p>
+</br>
+
+<p><%= link_to 'Checkout', new_order_url  %></p>
+
+</br>
