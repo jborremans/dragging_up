@@ -70,7 +70,7 @@ DraggingUp::Application.configure do
     ActiveMerchant::Billing::Base.mode = :production
 
     ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
-      :login => "joseph_1345770257_biz@gmail.com",
+      :login => "joseph_1345770257_biz_api1.gmail.com",
       :password => "1345770280",
       :signature => "ALUB7KdN9BLjb-GBwpM3eA0azbV5AUWDZWlqw--Eurd87pfWNx9-XoXl"
     )
