@@ -2,12 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.notice {
-  color:red
-}
 
 .clear {
 	clear: both;
+}
+
+.wrap {
+	width: 100%;
+	margin: 20px auto 150px auto;
 }
 
 /*home page trade buttons*/
@@ -58,6 +60,7 @@ section {
 	-moz-border-radius:.8em;
 	background:#fff;
 	float: left;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
 }
 
 .cimage, .pimage, .mimage, .eimage, .carp, .boil, .iron, .sheetmetal {
@@ -257,7 +260,20 @@ footer {
 	text-indent: 10px;
 	background: sandybrown;
 	line-height: 44px;
-	margin-top: 300px;
+	font-family: arial;
+	text-decoration: none;
+	color: black;
+	/*margin-top: 300px;*/
+}
+
+footer a {
+	text-decoration: none;
+	color: black;
+
+}
+
+footer a:hover {
+	text-decoration: underline;
 }
 
 

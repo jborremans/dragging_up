@@ -17,7 +17,7 @@
 body {
 margin: 0 auto;
 padding: 60px 0 0 0;
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-family:  "Droid Sans",Arial,"Helvetica Neue","Lucida Grande",sans-serif;
 font-size: 13px;
 line-height: 18px;
 color: #333;
@@ -31,7 +31,7 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 }
 
 .top {
-	font-family: 'Lusitana', serif;
+	font-family:  "Droid Sans",Arial,"Helvetica Neue","Lucida Grande",sans-serif;
 	background: #eca;
 	text-indent: 30px;
 	font-size: 45px;
@@ -42,6 +42,8 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 	right: 0;
 	left: 0;
 	top: 0;
+	color: black;
+
 
 }
 
@@ -51,6 +53,8 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 	list-style: none;
 	text-align: center;
 	padding-right: 29px;
+	font-family:  "Droid Sans",Arial,"Helvetica Neue","Lucida Grande",sans-serif;
+
 
 }
 
@@ -70,6 +74,7 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 	top: 40px;
 	color: white;
 	display: inline;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
 	
 
 }
@@ -92,8 +97,7 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 }
 
 .top a:hover {
-	background: sandybrown;
-	color: white;
+	text-decoration: underline;
 }
 
 
@@ -102,19 +106,20 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 	list-style: none;
 	float: right;
 	position: relative;
-	font-family: arial;
+	
 }
 
 .nav a {
 	text-decoration: none;
-	color: white;
+	color: black;
 	display: block;
+	font-weight: bold;
 }
 
 
 .nav li a:hover {
 	border-radius: 5px;
-	color: black;
+	text-decoration: underline;
 }
 
 .heading {
