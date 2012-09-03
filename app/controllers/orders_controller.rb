@@ -51,7 +51,7 @@ class OrdersController < ApplicationController
     @order.cart_id =current_cart.id
     @order.ip_address = request.remote_ip
       if @order.save
-       if order.purchase
+       if @order.purchase
          render :action => "success"
          # render :success
        else
