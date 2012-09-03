@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
-  attr_accessible :card_expiration_date, :card_number, :card_type, :card_verification, :first_name, :last_name, :cart_id, :tool_id, :ip_address
+  attr_accessible :card_expires_on, :card_number, :card_type, :card_verification, :first_name, :last_name, :cart_id, :ip_address, :express_token
   
   belongs_to :cart
   belongs_to :user
@@ -9,7 +9,7 @@ class Order < ActiveRecord::Base
   
   attr_accessor :card_number, :card_verification 
   
-   before_validation :validate_card, :on => :create
+  before_validation :validate_card, :on => :create
 
     def purchase
       response = GATEWAY.purchase(price_in_cents, credit_card, purchase_options)

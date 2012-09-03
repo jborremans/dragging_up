@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
   before_filter :current_user
   
   helper_method :current_user
+  
+  def current_cart
+    @current_cart || Cart.find_by_user_id(session[:user_id])
+  end
     
   def current_user
     @current_user ||= User.find_by_id(session[:user_id])

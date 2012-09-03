@@ -41,17 +41,26 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = current_cart.build_order(params[:order])
+    # @order = current_cart.build_order(params[:order])
+    # @order = Order.new
+    #     @order.first_name = params[:order][:first_name]
+    #     @order.last_name = params[:order][:last_name]
+    #     @order.card_type = params[:order][:card_type]
+    #     @order.card_expires_on = params[:order][:card_expires_on]
+    @order = Order.new(params[:order])
+    @order.cart_id =current_cart.id
     @order.ip_address = request.remote_ip
       if @order.save
        if order.purchase
          render :action => "success"
+         # render :success
        else
          render :action => "failure"
+         # render :failure
        end
-       
       else
         render :action => 'new'
+        # render :new
       end
     end
   end

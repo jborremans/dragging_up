@@ -32,8 +32,8 @@
     <%= f.text_field :card_verification %>
   </div>
   <div class="field">
-    <%= f.label :card_expiration_date %><br />
-    <%= f.date_select :card_expiration_date, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :add_month_numbers => true %>
+    <%= f.label :card_expires_on %><br />
+    <%= f.date_select :card_expires_on, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :add_month_numbers => true %>
   </div>
   <div class="actions">
     <%= f.submit %>
