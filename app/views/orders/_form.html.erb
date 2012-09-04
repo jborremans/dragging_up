@@ -20,8 +20,8 @@
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
+    <%= f.label :card_type %> <br/>
     <%= f.select :card_type, [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]] %></br>
-    <%= f.text_field :card_type %>
   </div>
   <div class="field">
     <%= f.label :card_number %><br />
