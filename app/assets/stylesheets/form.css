@@ -1,0 +1,85 @@
+#register {
+	float: right;
+	}
+
+form{
+	width:300px;
+	padding: 0px;
+	margin: 0px;
+	border: 1px solid #CCC;
+	}
+	
+fieldset {
+   border: 0px;
+   width: 266px;
+   padding-bottom: 50px;
+	}
+	
+legend {
+	width: 100%;
+	height: 65px;
+	border: 1px solid #CCC;
+
+	padding: 0px;
+	margin-bottom: 8px;
+	
+background: #f9f1e3; /* Old browsers */
+background: -moz-linear-gradient(top,  #f9f1e3 0%, #dfcdb1 32%, #f4e9d8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f1e3), color-stop(32%,#dfcdb1), color-stop(100%,#f4e9d8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f1e3', endColorstr='#f4e9d8',GradientType=0 ); /* IE6-9 */
+	}
+	
+h3{
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 13px;
+color: #333;
+padding-left: 12px;
+	}
+	
+h1{
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 24px;
+color: #731;
+	}
+	
+#all_items {
+margin-bottom: 18px;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 12px;
+font-weight: bold;
+line-height: 18px;
+}
+	
+.field {
+	color: #666;
+	width: 80px;
+	float: left;
+	/*clear helps break filed boxes*/
+	clear: both;
+		}
+		
+fieldset input{
+	width: 155px;
+	float: right;
+	color: #999;
+	line-height: 2em;
+		}
+		
+input[type='text'], [type='email']{
+	background: #fff;
+	}
+	
+	input[type='submit'], input[type='reset']{
+		
+		padding: 8px;
+			clear: both;
+		}
+		
+		input:focus {
+			background: yellow;
+			}
+			

@@ -52,5 +52,5 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'debugger'
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
 end
