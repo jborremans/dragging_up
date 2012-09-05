@@ -68,11 +68,12 @@ DraggingUp::Application.configure do
   config.after_initialize do
     
     ActiveMerchant::Billing::Base.mode = :production
-
-    ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
-      :login => "joseph_1345770257_biz_api1.gmail.com",
-      :password => "1345770280",
-      :signature => "ALUB7KdN9BLjb-GBwpM3eA0azbV5AUWDZWlqw--Eurd87pfWNx9-XoXl"
-    )
+     paypal_options = {
+        :login => "joseph_1345770257_biz_api1.gmail.com",
+        :password => "1345770280",
+        :signature => "ALUB7KdN9BLjb-GBwpM3eA0azbV5AUWDZWlqw--Eurd87pfWNx9-XoXl"
+      }  
+       ::STANDARD_GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(paypal_options)
+       ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
   end
 end
