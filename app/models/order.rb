@@ -12,7 +12,7 @@ class Order < ActiveRecord::Base
   before_validation :validate_card, :on => :create
 
     def purchase
-      response = GATEWAY.purchase(price_in_cents, credit_card, purchase_options)
+      response = process_purchase
       transactions.create!(:action => "purchase", :amount => price_in_cents, :response => response)
       cart.update_attribute(:purchased_at, Time.now) if response.success?
       response.success?
@@ -33,8 +33,16 @@ class Order < ActiveRecord::Base
     end
 
     private
+    
+    def process_purchase
+          if express_token.blank?
+            STANDARD_GATEWAY.purchase(price_in_cents, credit_card, standard_purchase_options)
+          else
+            EXPRESS_GATEWAY.purchase(price_in_cents, express_purchase_options)
+          end
+        end
 
-      def purchase_options
+      def standard_purchase_options
         {
           :ip => ip_address,
           :billing_address => {
@@ -47,6 +55,14 @@ class Order < ActiveRecord::Base
           }
         }
       end
+      
+      def express_purchase_options
+            {
+              :ip => ip_address,
+              :token => express_token,
+              :payer_id => express_payer_id
+            }
+          end
 
       def credit_card
         @credit_card ||= ActiveMerchant::Billing::CreditCard.new(
@@ -61,9 +77,9 @@ class Order < ActiveRecord::Base
       end
 
       def validate_card
-        unless credit_card.valid?
-          credit_card.errors.full_messages.each do |message|
-            errors[:base] << message
+        if express_token.blank? && !credit_card.valid?
+         credit_card.errors.full_messages.each do |message|
+           errors.add_to_base message
           end
         end
       end
