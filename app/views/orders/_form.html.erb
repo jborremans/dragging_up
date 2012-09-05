@@ -11,7 +11,7 @@
     </div>
   <% end %>
   
-  <% if @order.express_token.blank %>
+  <% if @order.express_token.blank? %>
 
   <div class="field">
     <%= f.label :first_name %><br />

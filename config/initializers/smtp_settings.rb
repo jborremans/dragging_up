@@ -1,4 +1,4 @@
-if Rails.env.development?
+# if Rails.env.development?
 
 all_smtp_config = YAML.load_file(File.join( Rails.root, 'config', 'smtp.yml'))
 current_smtp_config = all_smtp_config[Rails.env]
@@ -8,9 +8,9 @@ ActionMailer::Base.smtp_settings = {
   :port                 => 587,
   :domain               => "gmail.com",
   :user_name            => "joseph.borremans@gmail.com",
-  :password             => current_smtp_config['gmail_password'],
+  :password             => current_smtp_config['jborremans'],
   :authentication       => "plain",
   :enable_starttls_auto => true
 }
 
-end
+# end
