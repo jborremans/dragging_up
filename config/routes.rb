@@ -2,7 +2,10 @@ DraggingUp::Application.routes.draw do
   
   get "about_us/show"
 
-  resources :orders, only: [:new, :create]
+  resources :orders, only: [:new, :create] do
+    get 'express', on => :collection
+  end
+  
   resources :cartools, only: [:create, :destroy]
 
   post "cartool/create"
