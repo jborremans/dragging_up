@@ -36,7 +36,8 @@ class OrdersController < ApplicationController
    end
    
   def new
-    @order = Order.new
+    @order = Order.new(express_token: params[:token])
+    
 
     respond_to do |format|
       format.html # new.html.erb
