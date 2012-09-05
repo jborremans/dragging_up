@@ -37,7 +37,7 @@ DraggingUp::Application.configure do
   
   config.after_initialize do
     
-    ActiveMerchant::Billing::Base.mode = :test
+    ActiveMerchant::Billing::Base.mode = :testm
     ::STANDARD_GATEWAY = ActiveMerchant::Billing::BOGUSGateway.new
     ::EXPRESS_GATEWAY = ActiveMerchant::Billing::BOGUSGateway.new
   end
