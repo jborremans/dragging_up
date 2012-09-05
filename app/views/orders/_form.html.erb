@@ -10,6 +10,8 @@
       </ul>
     </div>
   <% end %>
+  
+  <% if @order.express_token.blank %>
 
   <div class="field">
     <%= f.label :first_name %><br />
@@ -34,6 +36,9 @@
   <div class="field">
     <%= f.label :card_expires_on %><br />
     <%= f.date_select :card_expires_on, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :add_month_numbers => true %>
+    <% else %>
+    <p>To Do: Display order confirmation details.</p>
+    <% end %>
   </div>
   <div class="actions">
     <%= f.submit %>
