@@ -11,15 +11,15 @@ class SessionsController < ApplicationController
           session[:user_id] = user.id
           redirect_to user_url(user), notice: "Welcome Back!"
         else
-          redirect_to root_url, notice: "Wrong email or password!"
+          redirect_to home_url, notice: "Wrong email or password!"
         end
       else
-        redirect_to root_url, notice: "You are now signed out.!"
+        redirect_to home_url, notice: "You are now signed out.!"
       end
     end
 
     def destroy
       session[:user_id] = nil
-      redirect_to root_url
+      redirect_to home_url
     end
   end

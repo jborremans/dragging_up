@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
       
   def require_login
     @user = User.find_by_id(session[:user_id])
-    redirect_to root_url, notice: 'Please login.' unless @user
+    redirect_to home_url, notice: 'Please login.' unless @user
   end
       
   def require_admin

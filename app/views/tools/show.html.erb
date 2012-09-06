@@ -1,5 +1,15 @@
+<div class="searchbar">
+<p><a href="">Pipefitter Tools</a> >> <a href="">Tool Item</a></p>
+<div class="searchcontainer">
+	        <input type="text" class="textinput" placeholder="Search here..." required>
+	        <button type="submit" class="button" >Search</button>
+</div>
+</div>
+
+<div id="showcontainer">
 <p id="notice"><%= notice %></p>
 
+<div class="descriptionbox">
 <p>
   <b>Tool name:</b>
   <%= @tool.tool_name %>
@@ -8,6 +18,7 @@
 <p>
   <b>Tool type:</b>
   <%= @tool.tool_type %>
+
 </p>
 
 <p>
@@ -29,7 +40,17 @@
   <b>Tool picture:</b>
   <%= @tool.tool_picture %>
 </p>
+</div><!--descriptionbox end-->
 
+<div class="toolimage"></div>
+
+<p class="lorem">
+Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+
+<div class="bottom">
 <%= link_to 'Delete', tool_path(@tool) %> 
 <%= link_to 'Edit', edit_tool_path(@tool) %> |
 <%= link_to 'Back', tools_path %>
+</div>
+</div><!--showcontainer end-->

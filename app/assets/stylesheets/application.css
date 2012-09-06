@@ -16,7 +16,7 @@
 
 body {
 margin: 0 auto;
-padding-top: 60px;
+padding: 60px 0 0 0;
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-size: 13px;
 line-height: 18px;
@@ -26,12 +26,24 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 
 /*start template nav*/
 
+.imageholder {
+	z-index: 999;
+	width: 350px;
+	height: 350px;
+	margin: 0px 0px -30px 0px;
+	padding: 0px;
+	background: url(/assets/newlogo.png) no-repeat;
+	position: absolute;
+	top: -30px;
+	left: 20px;
+}
+
 .top {
 	font-family: 'Lusitana', serif;
 	background: #eca;
 	text-indent: 30px;
 	font-size: 45px;
-	padding-top: 10px;
+	padding-top: 0px;
 	width: 100%;
 	height: 40px;
 	position: fixed;
@@ -41,12 +53,25 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 
 }
 
+.member-options {
+	font-size: 12px;
+	float: right;
+	list-style: none;
+	text-align: center;
+	padding-right: 29px;
+
+}
+
+#items{ float: right;
+	list-style: none;
+}
+
 
 .main-navbar {
 	width: 100%;
 	height: 40px;
 	text-indent: 10px;
-	background: #731;
+	background: sandybrown;
 	position: fixed;
 	right: 0;
 	left: 0;
@@ -71,10 +96,11 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 .top a {
 	text-decoration: none;
 	color: black;
+	font-weight: bold;
 }
 
 .top a:hover {
-	background: #731;
+	background: sandybrown;
 	color: white;
 }
 
@@ -96,14 +122,7 @@ background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/du
 
 .nav li a:hover {
 	border-radius: 5px;
-	color: #eca;
-}
-
-
-
-header {
-	padding: 10px;
-
+	color: black;
 }
 
 .heading {
@@ -113,132 +132,62 @@ header {
 }
 
 
+
+
+
+
+
+
+/*drop down*/
+
+
+/*.member-options li {
+  margin: 2px;
+  background: black;
+  list-style: none;
+  float: left;
+  position: relative;
+  font-family: arial;
+  border-radius: 5px;
+  width: 75px;
+  text-align: center;
+}
+
+.member-options a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  display: block;
+}
+
+.member-options ul {
+  background: #fff; 
+  list-style: none;
+  position: absolute;
+  left: -9999px; 
+}
+
+
+.member-options li a:hover {
+  background: red;
+  border: red;
+  border-radius: 5px;
+  color: black;
+}
+
+.member-options li:hover ul{ 
+  left: -42px;
+
+}*/
+
+
+
+/*drop down*/
+
+
 /*end template nav*/
 
 
-#content {
-	padding-bottom: 200px;
-}
-
-.content-here {
-	height: ;
-	width: 500px;
-}
-
-/*end template nav
-*/
-
-
-/*
-Form start*/
-
-
-
-/*
-register form
-*/
-
-#register {
-	float: right;
-	}
-
-form{
-	width:300px;
-	padding: 0px;
-	margin: 0px;
-	border: 1px solid #CCC;
-	}
-	
-fieldset {
-   border: 0px;
-   width: 266px;
-   padding-bottom: 50px;
-	}
-	
-legend {
-	width: 100%;
-	height: 65px;
-	border: 1px solid #CCC;
-
-	padding: 0px;
-	margin-bottom: 8px;
-	
-background: #f9f1e3; /* Old browsers */
-background: -moz-linear-gradient(top,  #f9f1e3 0%, #dfcdb1 32%, #f4e9d8 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f1e3), color-stop(32%,#dfcdb1), color-stop(100%,#f4e9d8)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f1e3', endColorstr='#f4e9d8',GradientType=0 ); /* IE6-9 */
-	}
-	
-legend p {
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-size: 13px;
-color: #333;
-padding-left: 12px;
-	}
-	
-legend p span {
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-size: 24px;
-color: #731;
-	}
-	
-label, input {
-margin-bottom: 18px;
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-size: 12px;
-font-weight: bold;
-line-height: 18px;
-}
-	
-label {
-	color: #666;
-	width: 80px;
-	float: left;
-	/*clear helps break filed boxes*/
-	clear: both;
-		}
-		
-fieldset input{
-	width: 155px;
-	float: right;
-	color: #999;
-	line-height: 2em;
-		}
-		
-input[type='text'], [type='email']{
-	background: #fff;
-	}
-	
-	input[type='submit'], input[type='reset']{
-		
-		padding: 8px;
-			clear: both;
-		}
-		
-		input:focus {
-			background: yellow;
-			}
-			
-/*
-sign in form
-*/
-
-#signin {
-	float: right;
-	padding: 0px;
-	}
-
-#signin p a {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 12px;
-	text-decoration: none;
-	padding-left: 14px;
-}
-/* End Form CSS*/
 
 .clear {
 	clear: both;
@@ -251,7 +200,7 @@ footer {
 	height: 40px;
 	color: white;
 	text-indent: 10px;
-	background: #731;
+	background: sandybrown;
 	line-height: 44px;
 	/*margin-top: 300px;*/
 

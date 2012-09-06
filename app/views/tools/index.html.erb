@@ -1,45 +1,55 @@
-<h1> Tools For Sale Page</h1>
+<div class="searchbar">
+<p>Pipefitter Tools >> Tool Item</p>
+<div class="searchcontainer">
+	        <input type="text" class="textinput" placeholder="Search here..." required>
+	        <button type="submit" class="button" >Search</button>
+</div>
+</div>
 
-<table>
-  <tr>
-    <th>Tool name</th>
-    <th>Tool type</th>
-    <th>Tool price</th>
-    <th>Tool condition</th>
-    <th>Tool description</th>
-    <th>Tool picture</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div id="searchblock">
+	<h1> Tools For Sale Page</h1>
+	
+<div id="toolcontainer">
+	<table>
+	  <tr>
+	    <th><p>Tool name</p></th>
+	    <th><p>Tool type</p></th>
+	    <th><p>Tool price</p></th>
+	    <th><p>Tool condition</p></th>
+	    <th><p>Tool description</p></th>
+	    <th><p>Tool picture</p></th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	  </tr>
 
 
 
-<% @tools.each do |tool| %>
-  <tr>
-    <td><%= tool.tool_name %></td>
-    <td><%= tool.tool_type %></td>
-    <td><%= number_to_currency(tool.tool_price, :precision => 0) %></td>
-    <td><%= tool.tool_condition %></td>
-    <td><%= tool.tool_description %></td>
-    <td>#<%= tool.tool_picture %></td>
-    <td><%= link_to 'Add to Cart', "#" %></td>
-    <td><%= link_to 'Show', tool_url(tool.id) %></td>
-    <td><%= link_to 'Edit', edit_tool_path(tool.id) %></td>
-    <td><%= link_to 'Destroy', tool_url(tool.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+	<% @tools.each do |tool| %>
+	  <tr>
+	    <td><%= tool.tool_name %></td>
+	    <td><%= tool.tool_type %></td>
+	    <td><%= number_to_currency(tool.tool_price, :precision => 0) %></td>
+	    <td><%= tool.tool_condition %></td>
+	    <td><%= tool.tool_description %></td>
+	    <td>#<%= tool.tool_picture %></td>
+	    <td><%= link_to 'Add to Cart', "#" %></td>
+	    <td><%= link_to 'Show', tool_url(tool.id) %></td>
+	    <td><%= link_to 'Edit', edit_tool_path(tool.id) %></td>
+	    <td><%= link_to 'Destroy', tool_url(tool.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	  </tr>
+	<% end %>
+	</table>
+</div><!--toolcontainer end-->
+	<p class="liststuff">
+	Mauris arcu nisl, eleifend ut fermentum nec, mattis eu lorem. Sed iaculis feugiat nisi et ullamcorper. Curabitur dictum nisl sed metus sagittis ullamcorper. Fusce risus enim, cursus non feugiat in, consequat in ligula. Morbi auctor laoreet mi vel rhoncus. Cras aliquet placerat rhoncus. Maecenas quis mi vel enim ultrices mattis a non magna. Integer commodo enim a augue lacinia dapibus. Sed nisi lacus, pellentesque eu malesuada et, fringilla ut libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a lacus mauris, sed egestas metus.
+	</p>
 
-<p>
-Mauris arcu nisl, eleifend ut fermentum nec, mattis eu lorem. Sed iaculis feugiat nisi et ullamcorper. Curabitur dictum nisl sed metus sagittis ullamcorper. Fusce risus enim, cursus non feugiat in, consequat in ligula. Morbi auctor laoreet mi vel rhoncus. Cras aliquet placerat rhoncus. Maecenas quis mi vel enim ultrices mattis a non magna. Integer commodo enim a augue lacinia dapibus. Sed nisi lacus, pellentesque eu malesuada et, fringilla ut libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a lacus mauris, sed egestas metus.
-</p>
-
-<br />
-<ul>
-<%= link_to 'Sell your Tools here!', new_tool_url %>
-</br>
-<%= link_to 'Back to Home', root_url %>
-</ul>
-
+	<br />
+	<ul>
+	<%= link_to 'Sell your Tools here!', new_tool_url %>
+	</br>
+	<%= link_to 'Back to Home', home_url %>
+	</ul>
+</div><!--searchblock end-->

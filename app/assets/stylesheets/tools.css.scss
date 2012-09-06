@@ -1,3 +1,183 @@
 // Place all the styles related to the tools controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// p:contains(name)
+
+#toolscontainer {
+margin: 0 auto;
+margin-top: 50px;
+padding-top: 20px;
+width: 900px;
+padding: 5px;
+}
+
+#toolcontainer {
+width: 100%;
+
+}
+
+#searchblock h1 {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 24px;
+color: #731;
+}
+
+#notice {
+width: 200px;
+margin-top: 80px;
+
+}
+
+#toolcontainer table {
+	background-color: #fff;
+border-top: 1px solid #ccc;
+border-left: 1px solid #ccc;
+}
+
+#toolcontainer table th {
+text-align: center;
+}
+
+#toolcontainer table th, td {
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+padding: .25em .5em;
+text-align: right;
+/*prevents data text from breaking*/
+white-space: nowrap;
+}
+
+.zebra {
+	background: pink;
+	}
+	/*highlight rollover effect*/
+	
+	.highlights {
+		background: yellow;
+		}
+
+
+.liststuff {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 65px;
+	border-top: 1px solid #ccc;
+	padding-top: 10px;
+}
+
+
+.toolimage {
+	float: left;
+	background-image: url(../img/toolimage.jpg);
+	/*background-color: #E7E7E7;*/
+	width: 400px;
+	height:300px;
+	margin: 0px 30px 30px 0px;
+	border: 2px solid #999;
+	}	
+	
+/*
+Styles tool list page
+*/	
+	
+#searchblock {
+width: 1130px;
+margin: auto;
+margin-top: 150px;
+}	
+
+.searchbar {
+margin: auto;
+}	
+		
+.searchbar {
+width: 800px;
+		height: 34px;
+		background-color: #E7E7E7;
+		padding-left: 14px;
+		padding-right: 20px;
+		margin-bottom: 10px;
+		margin-top: 80px;
+	    border: 1px solid #ccc;
+
+		}
+
+.searchbar p {
+	float: left;
+	font: 14px arial;
+	width: 40%;
+	padding-top: 0px;
+	padding-right: 230px;
+	margin-top: 8px;
+	}
+
+.searchcontainer{
+	
+margin-top: 3px;
+}
+		
+		#searchbar .searchcontainer {
+			clear: left;
+
+		float: right;
+			width:280px;
+			padding: 2px;
+			margin-top: 0px;
+			margin-bottom: 50px;
+		border: 1px solid red;
+		}
+
+				input:focus {
+				background: #FFFFCC;
+				}
+				
+				.button {
+				width: 62px;
+                margin-right: 8px;
+				}
+				
+/*show html properties*/
+
+#showcontainer {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	margin-top: 80px;
+	padding: 0px;
+}
+
+.descriptionbox {
+float: right;	
+width: 340px;
+padding: 0px;
+margin: 0px;	
+}
+
+.toolimage {
+float: left;
+	background-image: url(/assets/toolimage.jpg);
+	/*background-color: #E7E7E7;*/
+	width: 400px;
+	height:300px;
+	border: 2px solid #999;
+	padding: 0px;
+	margin-bottom: 35px;
+	}
+
+.bottom {
+width: 190px;
+clear: both;
+}
+
+
+
+.lorem {
+	padding-top: 10px;
+	border-top: 1px solid #ccc;
+width: 100%;
+clear: both;		
+margin-bottom: 50px;	
+}

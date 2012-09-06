@@ -1,3 +1,8 @@
+<div id="formbox">
+	<div class="formhead">
+		<h3>No online account</h3>
+		<h1>Register here</h1>
+	</div>
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -31,3 +36,6 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+</div><!--formbox end-->
+

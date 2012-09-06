@@ -1,3 +1,31 @@
 // Place all the styles related to the about_us controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*
+Help page attributes
+*/
+
+.aboutcontainer {
+	width: 600px;
+	margin: 200px auto 0px;
+
+}
+
+.aboutcontainer p {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #333;
+	margin-bottom: 20px;
+
+}
+
+.aboutcontainer h1 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	color: #731;
+	padding-left: 12px;
+	margin-top: 20px;
+}

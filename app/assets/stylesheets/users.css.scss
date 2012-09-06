@@ -1,3 +1,112 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// *#form field styles*/
+
+#formbox { 
+	width: 100%;
+    margin-top:170px;
+	}
+	
+
+#formbox form{
+	width: 300px;
+	height: 300px;
+	padding: 24px 0px 0px 0px;
+	margin: auto;
+	background: #fff;
+	border: 1px solid #CCC;
+	}
+	
+#formbox .formhead {
+		width: 300px;
+		height: 65px;
+		border: 1px solid #CCC;
+        margin: auto;
+		padding: 0px;
+
+	background: #f9f1e3; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f9f1e3 0%, #dfcdb1 32%, #f4e9d8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f1e3), color-stop(32%,#dfcdb1), color-stop(100%,#f4e9d8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f9f1e3 0%,#dfcdb1 32%,#f4e9d8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f1e3', endColorstr='#f4e9d8',GradientType=0 ); /* IE6-9 */
+		}
+
+	
+#formbox .formhead  h3{
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 13px;
+color: #333;
+padding-left: 12px;
+	}
+	
+#formbox .formhead  h1{
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 24px;
+padding-left: 12px;
+margin-top: -10px;
+color: #731;
+	}
+	
+#all_items {
+margin-bottom: 18px;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 12px;
+font-weight: bold;
+line-height: 18px;
+}
+	
+#formbox .field {
+	color: #666;
+	width: 248px;
+    height: 34px;
+	/*clear helps break filed boxes*/
+
+padding-left: 26px;
+		}
+		
+#formbox .field label{
+	width: 80px;
+	float: left;
+	color: #999;
+	padding: 0px;
+		}
+		
+#formbox .field input{
+	width: 155px;
+	float: right;
+	color: #999;
+	line-height: 1.6em;
+	color: #999;
+	padding: 0px;
+	margin-top: -18px;
+		}
+					
+		#formbox label, input {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 12px;
+		font-weight: bold;
+		}
+
+		
+#formbox .field input:focus {
+			background: yellow;
+			}
+			
+#formbox .actions {
+	margin-top: -15px;
+	margin-right: 24px;
+	float: right;
+clear: both;	
+	
+}
+
+.linkblock {
+	width: 240px;
+	margin: auto;
+
+	margin-top: 40px;
+}

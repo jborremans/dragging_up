@@ -1,5 +1,11 @@
-<h1>Log In</h1>
+<div id="signincontainer">
+<!--<h1>Log In</h1>-->
 
+<div class="formcontainer">
+	<div class="formheader">
+	<h5>Existing Customers</h5>
+	<h1>Sign in here</h1>
+	</div>
 <%= form_tag "/sessions/create" do %>
 
 <p>
@@ -10,11 +16,12 @@
     <%= label_tag :password %>
     <%= password_field_tag :password %>
 </p>
-    
+    <div class="submitbox">
   <%= submit_tag "Please let me in!" %>
-  
+  </div>
 <% end %>
-
+</div>
 <ul>
-<%= link_to 'Back to Home', root_url %>
+<%= link_to 'Back to Home', home_url %>
 </ul>
+</div>
